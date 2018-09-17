@@ -7,7 +7,8 @@
 		<style>
 			body {
 				font-family: Monospace;
-				background-color: #f0f0f0;
+				background-color: #FEEFDB;
+                color: #2603E6;
 				margin: 0px;
 				overflow: hidden;
 			}
@@ -15,7 +16,9 @@
 	</head>
 	<body>
 
-		<script src="../build/three.js"></script>
+        <script src="js/three.js"></script>
+        
+        <script src="js/loaders/OBJLoader.js"></script>
 
 		<script src="js/controls/TrackballControls.js"></script>
 		<script src="js/effects/AsciiEffect.js"></script>
@@ -32,7 +35,7 @@
 			var camera, controls, scene, renderer;
 			var effect;
 
-			var sphere, plane;
+            var sphere, plane;
 
 			var start = Date.now();
 
