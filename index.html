@@ -7,8 +7,8 @@
 		<style>
 			body {
 				font-family: Monospace;
-				background-color: #FEEFDB;
-                color: #2603E6;
+				background-color: #232323;
+                color: #00bf12;
 				margin: 0px;
 				overflow: hidden;
 			}
@@ -79,6 +79,7 @@
 					object.position.y = 0;
 					object.position.x = 0;
 					object.position.z = 0;
+					object.rotation.x=15*3.14/180;
 					object.scale.set(scale,scale,scale);
 					scene.add(object);
 				}
@@ -154,6 +155,9 @@
 			function render() {
 
 				var timer = Date.now() - start;
+
+				object.rotation.y = Math.abs( Math.sin( timer * 0.0001 ) ) * 1;
+				// object.rotation.y = timer * 0.0006;
 
 				controls.update();
 
